@@ -36,7 +36,8 @@ public class HelloUniverse {
         neptune.diametre = 49532;
         neptune.matiere = "Gazeuse";
         System.out.println(jupiter.nom + " est une planète "+ jupiter.matiere + " avec un diamètre de "+ jupiter.diametre + " kilomètres.");
-        
+        neptune.revolution();
+        mars.rotation();
     }
 
 }
