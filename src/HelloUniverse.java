@@ -1,71 +1,42 @@
+
+
 public class HelloUniverse {
 
-    public static void main(String[] args){
-        
-        // String phrase = "En %d, les planètes du système solaire étaient au nombre de : %d";
-        // int nbPlanetes=0;
-        // short annee=2000;
-        // if (annee<2006) {
-        //     nbPlanetes=9;
-        // } else {
-        //     nbPlanetes=8;
-        // }
-
-        // System.out.printf(phrase,annee,nbPlanetes);
-        int mois = 12;
-        switch (mois){
-            case 1 : {
-                System.out.println("Janvier");
-                break;
-            }
-            case 2 : {
-                System.out.println("Février");
-                break;
-            }
-            case 3 : {
-                System.out.println("Mars");
-                break;
-            }
-            case 4 : {
-                System.out.println("Avril");
-                break;
-            }
-            case 5 : {
-                System.out.println("Mai");
-                break;
-            }
-            case 6 : {
-                System.out.println("Juin");
-                break;
-            }
-            case 7 : {
-                System.out.println("Juillet");
-                break;
-            }
-            case 8 : {
-                System.out.println("Aout");
-                break;
-            }
-            case 9 : {
-                System.out.println("Septembre");
-                break;
-            }
-            case 10 : {
-                System.out.println("Octobre");
-                break;
-            }
-            case 11 : {
-                System.out.println("Novembre");
-                break;
-            }
-            case 12 : {
-                System.out.println("Decembre");
-                break;
-            }
-            default:
-                System.out.println("Ce mois n'existe pas !");
-        }
+    public static void main(String... args) {
+        Planete mercure = new Planete();
+        mercure.nom = "Mercure";
+        mercure.diametre = 4880;
+        mercure.matiere = "tellurique";
+        Planete venus = new Planete();
+        venus.nom = "Venus";
+        venus.diametre = 12100;
+        venus.matiere = "tellurique";
+        Planete terre = new Planete();
+        terre.nom = "La Terre";
+        terre.diametre = 12756;
+        terre.matiere = "tellurique";
+        Planete mars = new Planete();
+        mars.nom = "Mars";
+        mars.diametre = 6792;
+        mars.matiere = "tellurique";
+        Planete jupiter = new Planete();
+        jupiter.nom = "Jupiter";
+        jupiter.diametre = 142984;
+        jupiter.matiere = "Gazeuse";
+        Planete saturne = new Planete();
+        saturne.nom = "Saturne";
+        saturne.diametre = 120536;
+        saturne.matiere = "Gazeuse";
+        Planete uranus = new Planete();
+        uranus.nom = "Uranus";
+        uranus.diametre = 51118;
+        uranus.matiere = "Gazeuse";
+        Planete neptune = new Planete();
+        neptune.nom = "Neptune";
+        neptune.diametre = 49532;
+        neptune.matiere = "Gazeuse";
+        System.out.println(jupiter.nom + " est une planète "+ jupiter.matiere + " avec un diamètre de "+ jupiter.diametre + " kilomètres.");
         
     }
-    
+
 }
