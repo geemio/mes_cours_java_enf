@@ -17,15 +17,17 @@ public class Planete {
         System.out.println(nom + " a effectué "+ tour +" tours sur elle-même.");
     }
 
-    void accueillirVaisseau(Vaisseau nouveauVaisseau){
+    Vaisseau accueillirVaisseau(Vaisseau nouveauVaisseau){
         if (vaisseauPresent != null) {
             System.out.println("Un vaisseau de type "+ vaisseauPresent.type +" doit s'en aller.");   
         } else {
             System.out.println("Aucun vaisseau ne s'en va.");
         }
+        Vaisseau vaisseauPrecedent = vaisseauPresent;
         vaisseauPresent = nouveauVaisseau;
         totalVisiteurs += nouveauVaisseau.nbPassagers;
         System.out.println("Le nombre d'humains ayant déjà séjourné sur " + nom + " est actuellement de "+ totalVisiteurs +".");
+        return vaisseauPrecedent;
     }
 
     // void accueillirVaisseau(int nouveauxHumains){
