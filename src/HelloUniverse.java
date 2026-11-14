@@ -39,8 +39,8 @@ public class HelloUniverse {
         System.out.println(jupiter.nom + " est une planète "+ jupiter.matiere + " avec un diamètre de "+ jupiter.diametre + " kilomètres.");
         neptune.revolution(-3542);
         mars.rotation(-684);
-        mars.accueillirVaisseau(8);
-        mars.accueillirVaisseau("FREGATE");
+        // mars.accueillirVaisseau(8);
+        // mars.accueillirVaisseau("FREGATE");
         System.out.printf("Le nombre d'humains ayant déja séjourné sur %s est actuellement de %d.", mars.nom, mars.totalVisiteurs);
         uranus.atmosphere.tauxHydrogene = 83F;
         uranus.atmosphere.tauxHelium = 15F;
@@ -53,6 +53,16 @@ public class HelloUniverse {
         System.out.println("A "+ uranus.atmosphere.tauxHelium + "% d'helium" );
         System.out.println("A "+ uranus.atmosphere.tauxMethane + "% de méthane" );
         System.out.println("A "+ uranus.atmosphere.tauxSodium + "% de sodium" );
+
+        Vaisseau fregate = new Vaisseau();
+        fregate.type = "FREGATE";
+        fregate.nbPassagers = 9;
+        Vaisseau croiseur = new Vaisseau();
+        croiseur.type = "CROISEUR";
+        croiseur.nbPassagers = 42;
+        mars.accueillirVaisseau(fregate);
+        mars.accueillirVaisseau(croiseur);
+
     }
 
 }
